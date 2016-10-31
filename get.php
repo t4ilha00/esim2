@@ -1,3 +1,4 @@
+<?php include 'menu.php'; ?>
 <h1>Testataan get-metodia</h1>
 
 <form method="get" action="get.php">
@@ -18,3 +19,5 @@ if(isset($_GET['nappi']))
 	echo "Terve $enimi $snimi";
 }
 ?>
+
+<?php include 'footer.php'; ?>
