@@ -4,16 +4,13 @@
 include "yhteys.php";
 $sql="SELECT etunimi, sukunimi FROM asiakkaat";
 $asiakkaat=$db->query($sql);
-
-if(isset($asiakkaat)) {
-
+	echo "<TABLE border=1>";
+	echo "<TR><TH>Etunimi</TH><TH>Sukunimi</TH></TR>";
 	foreach ($asiakkaat as $rivi) {
-	echo $rivi['etunimi'].' '.$rivi['sukunimi']. '<br>';
+	echo '<tr><td>'. $rivi['etunimi'].'</td><td> '.$rivi['sukunimi']. '</td></tr>';
 	}
-}
-else {
-	echo "Tietokantaan ei saatu yhteyttä, ota yhteys ylläpitoon";
-}
+
+	echo "</TABLE>";
 ?>
 
 <?php include "footer.php"; ?>
